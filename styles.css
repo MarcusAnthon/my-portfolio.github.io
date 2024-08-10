@@ -19,6 +19,10 @@ body {
   margin-inline: auto;
 }
 
+button {
+  transition: 0.2s ease-in-out;
+}
+
 #one-page .nav_container {
   width: 1200px;
   height: auto;
@@ -195,7 +199,7 @@ h1 {
 }
 
 .head-about {
-  height: 150px;
+  height: 200px;
   width: 45%;
   margin-top: 80px;
   margin-bottom: 40px;
@@ -465,7 +469,7 @@ h1 {
   height: 130px;
   width: 45%;
   margin-top: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .head-experience h2 {
@@ -564,6 +568,64 @@ h1 {
   justify-content: center;
 }
 
+.cl_sig img:first-of-type {
+  margin-bottom: 20px;
+}
+
+/* This is for the "CTA" section */
+
+#cta_container {
+  height: 400px;
+  background-color: #000;
+  background-image: url(./images/background-img.png);
+  background-position: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.cta {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cta_cv {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 4em;
+  font-weight: 600;
+  margin: 30px 0 10px;
+
+}
+
+.cta a {
+  text-decoration: none;
+  z-index: 2;
+}
+
+.cta a::after {
+  content: '';
+  width: 100%;
+  height: 5px;
+  background: #ab9f95;
+  border: 1px solid #ab9f95;
+  position: absolute;
+  margin: 0 auto;
+}
+
+.cta_tag {
+  width: 400px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+
 /* This is for the "Testimonials" section */
 
 #testimonial {
@@ -576,9 +638,14 @@ h1 {
 
 .head-testimonial {
   height: 130px;
-  width: 50%;
-  /* margin-top: 80px; */
+  width: 45%;
   margin: 80px 0 50px;
+}
+
+.head-testimonial h2 {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 .ttml_list {
@@ -596,6 +663,14 @@ h1 {
 
 .ttml_client p:nth-child(1) {
   margin-bottom: 50px;
+}
+
+.client_name {
+  font-weight: bold;
+}
+
+.client_post {
+  text-transform: uppercase;
 }
 
 .ttml_client img {
@@ -637,9 +712,12 @@ h1 {
 .ct_info p {
   margin-bottom: 50px;
 }
+.ct_info p:nth-of-type(2) {
+  font-weight: 600;
+}
 
 table {
-  width: 250px;
+  width: 350px;
 }
 
 .ct_form {
@@ -694,7 +772,11 @@ table {
   color: #000;
   background-color: #e2ded8;
   display: block;
-  padding: 20px 0 0;
+  padding-top: 20px;
+}
+
+#foot_section * {
+  /* border: 1px solid black; */
 }
 
 .foot_details {
@@ -711,12 +793,18 @@ table {
 
 .cta_left {
   width: 50%;
-  height: auto;
+  height: 120px;
   display: grid;
 }
 
 .cta_left h2 {
   order: 2;
+  font-size: 75px;
+}
+
+.cta_left p {
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .cta_right {
@@ -735,6 +823,8 @@ table {
   align-content: center;
   justify-content: center;
   margin: 0 0 0 50px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .cta_right button {
@@ -745,6 +835,13 @@ table {
   border-radius: 50%;
   color: #f5f5f5;
   background-color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cta_right button:hover {
+  background-color: #f5f5f5;
+  color: #000;
 }
 
 .foot_middle {
@@ -763,12 +860,20 @@ table {
 }
 
 .middle_links h4 {
-  color: #ab9f95;
+  color: #667f91;
+  font-weight: 600;
 }
 
 .middle_links a {
   color: #000;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+.middle_links a:hover {
+  color: #f5f5f5;
 }
 
 .middle_img {
@@ -783,10 +888,11 @@ table {
 
 .foot_lower {
   display: flex;
-  height: 50px;
+  height: 70px;
+  margin: 20px 0;
 }
 
 .foot_lower div {
-  width: 200px;
-  margin-right: 30px;
+  width: auto;
+  margin-right: 70px;
 }
